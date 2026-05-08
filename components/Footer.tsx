@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Kolom 1: Brand */}
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <Shield className="w-6 h-6 text-yellow-400" />
+            <Shield className="w-6 h-6 text-black" />
             <span className="text-white font-bold text-lg">SIGAP</span>
           </div>
           <p className="text-sm leading-relaxed text-gray-400">
@@ -45,11 +45,11 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-3">Kontak Darurat</h3>
           <ul className="text-sm flex flex-col gap-2 text-gray-400">
-            <li>🚁 BASARNAS: <span className="text-yellow-400 font-bold">115</span></li>
-            <li>🏛️ BNPB: <span className="text-yellow-400 font-bold">117</span></li>
-            <li>🚑 Ambulans: <span className="text-yellow-400 font-bold">118 / 119</span></li>
-            <li>🚒 Pemadam: <span className="text-yellow-400 font-bold">113</span></li>
-            <li>👮 Polisi: <span className="text-yellow-400 font-bold">110</span></li>
+            <li>BASARNAS: <span className="text-yellow-400 font-bold">115</span></li>
+            <li>BNPB: <span className="text-yellow-400 font-bold">117</span></li>
+            <li>Ambulans: <span className="text-yellow-400 font-bold">118 / 119</span></li>
+            <li>Pemadam: <span className="text-yellow-400 font-bold">113</span></li>
+            <li>Polisi: <span className="text-yellow-400 font-bold">110</span></li>
           </ul>
         </div>
       </div>
