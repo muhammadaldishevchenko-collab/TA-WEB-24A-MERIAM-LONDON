@@ -122,3 +122,71 @@ export const mitigasiData = [
     ],
   },
 ];
+
+export const emergencyContacts = [
+  { id: 1, name: "BASARNAS", number: "115", desc: "Badan SAR Nasional", icon: "🚁" },
+  { id: 2, name: "BNPB", number: "117", desc: "Badan Nasional Penanggulangan Bencana", icon: "🏛️" },
+  { id: 3, name: "PMI", number: "021-7992325", desc: "Palang Merah Indonesia", icon: "🩺" },
+  { id: 4, name: "Polisi", number: "110", desc: "Kepolisian Republik Indonesia", icon: "👮" },
+  { id: 5, name: "Pemadam Kebakaran", number: "113", desc: "Dinas Pemadam Kebakaran", icon: "🚒" },
+  { id: 6, name: "Ambulans / Darurat", number: "118 / 119", desc: "Layanan Gawat Darurat Medis", icon: "🚑" },
+  { id: 7, name: "PLN (Gangguan Listrik)", number: "123", desc: "Perusahaan Listrik Negara", icon: "⚡" },
+  { id: 8, name: "BMKG", number: "196", desc: "Badan Meteorologi, Klimatologi & Geofisika", icon: "🌤️" },
+];
+
+export const beritaData = [
+  {
+    id: 1,
+    judul: "BMKG Keluarkan Peringatan Dini Gempa di Wilayah Sulawesi",
+    tanggal: "7 Mei 2025",
+    kategori: "Gempa",
+    ringkasan: "BMKG mengeluarkan peringatan dini terkait potensi gempa berkekuatan 5,6 SR di wilayah Sulawesi Tengah. Masyarakat diminta tetap waspada dan memantau informasi resmi.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🌍",
+  },
+  {
+    id: 2,
+    judul: "Simulasi Evakuasi Tsunami di Pesisir Selatan Jawa Dilaksanakan",
+    tanggal: "5 Mei 2025",
+    kategori: "Tsunami",
+    ringkasan: "Ribuan warga pesisir selatan Jawa mengikuti simulasi evakuasi tsunami yang diselenggarakan oleh BNPB dan pemerintah daerah setempat.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🌀",
+  },
+  {
+    id: 3,
+    judul: "BNPB Distribusikan Logistik ke Korban Banjir Kalimantan",
+    tanggal: "3 Mei 2025",
+    kategori: "Banjir",
+    ringkasan: "BNPB bersama instansi terkait mendistribusikan ribuan paket logistik kepada korban banjir di Kalimantan Selatan yang terdampak sejak pekan lalu.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🌊",
+  },
+  {
+    id: 4,
+    judul: "Status Gunung Semeru Dinaikkan ke Level III (Siaga)",
+    tanggal: "1 Mei 2025",
+    kategori: "Erupsi",
+    ringkasan: "PVMBG menaikkan status Gunung Semeru ke Level III menyusul peningkatan aktivitas vulkanik yang signifikan dalam 48 jam terakhir.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🌋",
+  },
+  {
+    id: 5,
+    judul: "Pelatihan Pertolongan Pertama untuk 500 Relawan Kebencanaan",
+    tanggal: "28 April 2025",
+    kategori: "Edukasi",
+    ringkasan: "PMI menyelenggarakan pelatihan pertolongan pertama dan penanganan korban bencana yang diikuti oleh 500 relawan dari berbagai daerah.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🩺",
+  },
+  {
+    id: 6,
+    judul: "Teknologi Early Warning System Dipasang di 50 Titik Rawan",
+    tanggal: "25 April 2025",
+    kategori: "Teknologi",
+    ringkasan: "Sistem peringatan dini berbasis sensor canggih kini dipasang di 50 titik rawan bencana sebagai bagian dari program mitigasi bencana nasional.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "📡",
+  },
+];
