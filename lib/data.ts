@@ -48,3 +48,77 @@ export const educationData = [
     level: "Sedang",
   },
 ];
+
+export const mitigasiData = [
+  {
+    id: 1,
+    bencana: "Gempa Bumi",
+    icon: "🌍",
+    sebelum: [
+      "Kenali struktur bangunan tempat tinggal",
+      "Siapkan tas darurat (air, makanan, obat-obatan)",
+      "Tentukan titik kumpul keluarga",
+      "Pelajari jalur evakuasi terdekat",
+      "Pasang alarm dini gempa jika tersedia",
+    ],
+    saatTerjadi: [
+      "DROP: Merunduk dan lindungi kepala dengan tangan",
+      "COVER: Berlindung di bawah meja atau tempat tidur",
+      "HOLD ON: Pegang erat sampai guncangan berhenti",
+      "Jauhi jendela kaca dan lemari yang bisa jatuh",
+    ],
+    setelah: [
+      "Periksa kondisi seluruh anggota keluarga",
+      "Waspadai gempa susulan yang mungkin terjadi",
+      "Jangan gunakan lift, gunakan tangga darurat",
+      "Lapor ke posko bencana atau BPBD setempat",
+    ],
+  },
+  {
+    id: 2,
+    bencana: "Banjir",
+    icon: "🌊",
+    sebelum: [
+      "Bersihkan saluran drainase sekitar rumah",
+      "Simpan dokumen penting di tempat tinggi & kedap air",
+      "Siapkan pelampung dan perlengkapan darurat",
+      "Pantau prediksi cuaca dari BMKG secara rutin",
+      "Kenali tanda-tanda banjir bandang",
+    ],
+    saatTerjadi: [
+      "Segera matikan instalasi listrik di rumah",
+      "Evakuasi ke tempat yang lebih tinggi dan aman",
+      "Bawa barang berharga dan dokumen penting",
+      "Hindari berjalan di air yang mengalir deras",
+    ],
+    setelah: [
+      "Bersihkan lumpur dan genangan air di dalam rumah",
+      "Waspadai penyakit pasca banjir seperti diare & leptospirosis",
+      "Laporkan kerusakan ke pemerintah setempat",
+      "Disinfeksi sumber air dan fasilitas sanitasi",
+    ],
+  },
+  {
+    id: 3,
+    bencana: "Tsunami",
+    icon: "🌀",
+    sebelum: [
+      "Hafalkan jalur evakuasi menuju tempat tinggi",
+      "Kenali tanda-tanda alam tsunami (gempa kuat, air surut tiba-tiba)",
+      "Ikuti simulasi evakuasi tsunami yang diadakan pemda",
+      "Siapkan tas darurat yang mudah dibawa lari",
+    ],
+    saatTerjadi: [
+      "Segera lari ke tempat yang lebih tinggi tanpa menunggu",
+      "Jangan berhenti untuk mengambil barang berharga",
+      "Ikuti rambu dan jalur evakuasi tsunami",
+      "Jika tidak sempat lari, naiki bangunan bertingkat yang kuat",
+    ],
+    setelah: [
+      "Jangan kembali ke pantai sebelum ada pernyataan aman resmi",
+      "Hindari bangunan yang rusak atau tidak stabil",
+      "Laporkan korban dan kerusakan ke posko BNPB",
+      "Ikuti arahan dari petugas dan pemerintah setempat",
+    ],
+  },
+];
