@@ -19,13 +19,13 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-red-700 text-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-green-900 text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-          <Shield className="w-7 h-7 text-yellow-300" />
+          <Shield className="w-7 h-7 text-black" />
           <span>SIGAP</span>
-          <span className="hidden sm:inline text-yellow-200 font-normal text-sm">
+          <span className="hidden sm:inline text-dark text-white font-normal text-sm">
             | Sistem Info Kebencanaan
           </span>
         </Link>
@@ -38,8 +38,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   pathname === link.href
-                    ? "bg-red-900 text-yellow-300"
-                    : "hover:bg-red-600 text-white"
+                    ? "bg bg-gray-800 text-white"
+                    : "hover:bg-gray-800 text-white"
                 }`}
               >
                 {link.label}
@@ -51,9 +51,9 @@ export default function Navbar() {
         {/* Tombol Darurat Desktop */}
         <Link
           href="/darurat"
-          className="hidden md:flex items-center gap-1 bg-yellow-400 text-red-900 font-bold text-sm px-4 py-2 rounded-full hover:bg-yellow-300 transition-colors"
+          className="hidden md:flex items-center gap-1 bg-gray-800 text-white font-bold text-sm px-4 py-2 rounded-full hover:bg-blue-500 transition-colors"
         >
-          🆘 Darurat
+          Darurat
         </Link>
 
         {/* Hamburger Mobile */}
@@ -68,7 +68,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-red-800 px-4 pb-4">
+        <div className="md:hidden bg-gray-800 px-4 pb-4">
           <ul className="flex flex-col gap-1 pt-2">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -77,8 +77,8 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className={`block px-4 py-2 rounded-md text-sm font-medium ${
                     pathname === link.href
-                      ? "bg-red-900 text-yellow-300"
-                      : "hover:bg-red-600"
+                      ? "bg-green-900 text-white"
+                      : "hover:bg-black"
                   }`}
                 >
                   {link.label}
@@ -89,9 +89,9 @@ export default function Navbar() {
               <Link
                 href="/darurat"
                 onClick={() => setMenuOpen(false)}
-                className="block mt-2 bg-yellow-400 text-red-900 font-bold text-sm px-4 py-2 rounded-full text-center"
+                className="block mt-2 bg-green-900 text-white font-bold text-sm px-4 py-2 rounded-full text-center"
               >
-                🆘 Info Darurat
+                Info Darurat
               </Link>
             </li>
           </ul>

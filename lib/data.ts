@@ -48,3 +48,145 @@ export const educationData = [
     level: "Sedang",
   },
 ];
+
+export const mitigasiData = [
+  {
+    id: 1,
+    bencana: "Gempa Bumi",
+    icon: "🌍",
+    sebelum: [
+      "Kenali struktur bangunan tempat tinggal",
+      "Siapkan tas darurat (air, makanan, obat-obatan)",
+      "Tentukan titik kumpul keluarga",
+      "Pelajari jalur evakuasi terdekat",
+      "Pasang alarm dini gempa jika tersedia",
+    ],
+    saatTerjadi: [
+      "DROP: Merunduk dan lindungi kepala dengan tangan",
+      "COVER: Berlindung di bawah meja atau tempat tidur",
+      "HOLD ON: Pegang erat sampai guncangan berhenti",
+      "Jauhi jendela kaca dan lemari yang bisa jatuh",
+    ],
+    setelah: [
+      "Periksa kondisi seluruh anggota keluarga",
+      "Waspadai gempa susulan yang mungkin terjadi",
+      "Jangan gunakan lift, gunakan tangga darurat",
+      "Lapor ke posko bencana atau BPBD setempat",
+    ],
+  },
+  {
+    id: 2,
+    bencana: "Banjir",
+    icon: "🌊",
+    sebelum: [
+      "Bersihkan saluran drainase sekitar rumah",
+      "Simpan dokumen penting di tempat tinggi & kedap air",
+      "Siapkan pelampung dan perlengkapan darurat",
+      "Pantau prediksi cuaca dari BMKG secara rutin",
+      "Kenali tanda-tanda banjir bandang",
+    ],
+    saatTerjadi: [
+      "Segera matikan instalasi listrik di rumah",
+      "Evakuasi ke tempat yang lebih tinggi dan aman",
+      "Bawa barang berharga dan dokumen penting",
+      "Hindari berjalan di air yang mengalir deras",
+    ],
+    setelah: [
+      "Bersihkan lumpur dan genangan air di dalam rumah",
+      "Waspadai penyakit pasca banjir seperti diare & leptospirosis",
+      "Laporkan kerusakan ke pemerintah setempat",
+      "Disinfeksi sumber air dan fasilitas sanitasi",
+    ],
+  },
+  {
+    id: 3,
+    bencana: "Tsunami",
+    icon: "🌀",
+    sebelum: [
+      "Hafalkan jalur evakuasi menuju tempat tinggi",
+      "Kenali tanda-tanda alam tsunami (gempa kuat, air surut tiba-tiba)",
+      "Ikuti simulasi evakuasi tsunami yang diadakan pemda",
+      "Siapkan tas darurat yang mudah dibawa lari",
+    ],
+    saatTerjadi: [
+      "Segera lari ke tempat yang lebih tinggi tanpa menunggu",
+      "Jangan berhenti untuk mengambil barang berharga",
+      "Ikuti rambu dan jalur evakuasi tsunami",
+      "Jika tidak sempat lari, naiki bangunan bertingkat yang kuat",
+    ],
+    setelah: [
+      "Jangan kembali ke pantai sebelum ada pernyataan aman resmi",
+      "Hindari bangunan yang rusak atau tidak stabil",
+      "Laporkan korban dan kerusakan ke posko BNPB",
+      "Ikuti arahan dari petugas dan pemerintah setempat",
+    ],
+  },
+];
+
+export const emergencyContacts = [
+  { id: 1, name: "BASARNAS", number: "115", desc: "Badan SAR Nasional", icon: "🚁" },
+  { id: 2, name: "BNPB", number: "117", desc: "Badan Nasional Penanggulangan Bencana", icon: "🏛️" },
+  { id: 3, name: "PMI", number: "021-7992325", desc: "Palang Merah Indonesia", icon: "🩺" },
+  { id: 4, name: "Polisi", number: "110", desc: "Kepolisian Republik Indonesia", icon: "👮" },
+  { id: 5, name: "Pemadam Kebakaran", number: "113", desc: "Dinas Pemadam Kebakaran", icon: "🚒" },
+  { id: 6, name: "Ambulans / Darurat", number: "118 / 119", desc: "Layanan Gawat Darurat Medis", icon: "🚑" },
+  { id: 7, name: "PLN (Gangguan Listrik)", number: "123", desc: "Perusahaan Listrik Negara", icon: "⚡" },
+  { id: 8, name: "BMKG", number: "196", desc: "Badan Meteorologi, Klimatologi & Geofisika", icon: "🌤️" },
+];
+
+export const beritaData = [
+  {
+    id: 1,
+    judul: "BMKG Keluarkan Peringatan Dini Gempa di Wilayah Sulawesi",
+    tanggal: "7 Mei 2025",
+    kategori: "Gempa",
+    ringkasan: "BMKG mengeluarkan peringatan dini terkait potensi gempa berkekuatan 5,6 SR di wilayah Sulawesi Tengah. Masyarakat diminta tetap waspada dan memantau informasi resmi.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🌍",
+  },
+  {
+    id: 2,
+    judul: "Simulasi Evakuasi Tsunami di Pesisir Selatan Jawa Dilaksanakan",
+    tanggal: "5 Mei 2025",
+    kategori: "Tsunami",
+    ringkasan: "Ribuan warga pesisir selatan Jawa mengikuti simulasi evakuasi tsunami yang diselenggarakan oleh BNPB dan pemerintah daerah setempat.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🌀",
+  },
+  {
+    id: 3,
+    judul: "BNPB Distribusikan Logistik ke Korban Banjir Kalimantan",
+    tanggal: "3 Mei 2025",
+    kategori: "Banjir",
+    ringkasan: "BNPB bersama instansi terkait mendistribusikan ribuan paket logistik kepada korban banjir di Kalimantan Selatan yang terdampak sejak pekan lalu.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🌊",
+  },
+  {
+    id: 4,
+    judul: "Status Gunung Semeru Dinaikkan ke Level III (Siaga)",
+    tanggal: "1 Mei 2025",
+    kategori: "Erupsi",
+    ringkasan: "PVMBG menaikkan status Gunung Semeru ke Level III menyusul peningkatan aktivitas vulkanik yang signifikan dalam 48 jam terakhir.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🌋",
+  },
+  {
+    id: 5,
+    judul: "Pelatihan Pertolongan Pertama untuk 500 Relawan Kebencanaan",
+    tanggal: "28 April 2025",
+    kategori: "Edukasi",
+    ringkasan: "PMI menyelenggarakan pelatihan pertolongan pertama dan penanganan korban bencana yang diikuti oleh 500 relawan dari berbagai daerah.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "🩺",
+  },
+  {
+    id: 6,
+    judul: "Teknologi Early Warning System Dipasang di 50 Titik Rawan",
+    tanggal: "25 April 2025",
+    kategori: "Teknologi",
+    ringkasan: "Sistem peringatan dini berbasis sensor canggih kini dipasang di 50 titik rawan bencana sebagai bagian dari program mitigasi bencana nasional.",
+    penulis: "Tim Redaksi SIGAP",
+    image: "📡",
+  },
+];
