@@ -190,3 +190,125 @@ export const beritaData = [
     image: "📡",
   },
 ];
+
+// ═══════════════════════════════════════════════
+// BAGIAN 2 — TIPE TYPESCRIPT
+// ═══════════════════════════════════════════════
+
+export type StatistikItem = {
+  id: number; tahun: number; jenisBencana: string;
+  jumlahKejadian: number; jumlahKorban: number;
+  jumlahDampak: number; provinsi: string;
+};
+
+export type KomentarItem = {
+  id: number; topikId: string; topikJenis: string;
+  nama: string; email: string; isi: string;
+  disetujui: boolean; createdAt: Date;
+};
+
+export type PeringatanItem = {
+  id: number; provinsi: string; jenis: string;
+  level: string; pesan: string;
+  berlakuHingga: Date; aktif: boolean; createdAt: Date;
+};
+
+export type LaporanItem = {
+  id: number; namaPelapor: string; noTelepon: string;
+  jenisKelamin: string; provinsi: string; kabupaten: string;
+  kecamatan: string; alamatLengkap: string; jenisBencana: string;
+  tingkatDarurat: string; jumlahKorban: number; deskripsi: string;
+  status: string; createdAt: Date; updatedAt: Date;
+};
+
+// ═══════════════════════════════════════════════
+// BAGIAN 3 — KONSTANTA VISUAL
+// ═══════════════════════════════════════════════
+
+export const bencanaIcon: Record<string, string> = {
+  "Banjir": "🌊", "Gempa Bumi": "🌍", "Gempa": "🌍",
+  "Tanah Longsor": "⛰️", "Erupsi Gunung Berapi": "🌋",
+  "Erupsi": "🌋", "Tsunami": "🌀", "Kebakaran Hutan": "🔥",
+  "Angin Puting Beliung": "🌪️", "Kekeringan": "☀️",
+};
+
+export const bencanaWarna: Record<string, string> = {
+  "Banjir": "#3B82F6", "Gempa Bumi": "#EF4444",
+  "Tanah Longsor": "#F97316", "Erupsi Gunung Berapi": "#DC2626",
+  "Tsunami": "#6366F1", "Kebakaran Hutan": "#F59E0B",
+};
+
+export const levelColor: Record<string, string> = {
+  Waspada: "bg-yellow-100 text-yellow-800 border-yellow-300",
+  Siaga:   "bg-orange-100 text-orange-800 border-orange-300",
+  Bahaya:  "bg-red-100   text-red-800   border-red-300",
+};
+
+export const levelIcon: Record<string, string> = {
+  Waspada: "🟡", Siaga: "🟠", Bahaya: "🔴",
+};
+
+export const daruratColor: Record<string, string> = {
+  Rendah: "bg-green-100 text-green-700 border-green-200",
+  Sedang: "bg-yellow-100 text-yellow-700 border-yellow-200",
+  Tinggi: "bg-orange-100 text-orange-700 border-orange-200",
+  Kritis: "bg-red-100 text-red-700 border-red-200",
+};
+
+export const daruratIcon: Record<string, string> = {
+  Rendah: "🟢", Sedang: "🟡", Tinggi: "🟠", Kritis: "🔴",
+};
+
+export const statusConfig: Record<string, { label: string; color: string }> = {
+  Menunggu:  { label: "Menunggu",  color: "bg-gray-100 text-gray-700"   },
+  Diproses:  { label: "Diproses",  color: "bg-blue-100 text-blue-700"   },
+  Ditangani: { label: "Ditangani", color: "bg-green-100 text-green-700" },
+  Ditolak:   { label: "Ditolak",   color: "bg-red-100 text-red-700"     },
+};
+
+export const categoryColors: Record<string, string> = {
+  Gempa:     "bg-red-100 text-red-700",
+  Tsunami:   "bg-blue-100 text-blue-700",
+  Banjir:    "bg-sky-100 text-sky-700",
+  Erupsi:    "bg-orange-100 text-orange-700",
+  Edukasi:   "bg-green-100 text-green-700",
+  Teknologi: "bg-purple-100 text-purple-700",
+};
+
+// ═══════════════════════════════════════════════
+// BAGIAN 4 — HELPER FUNCTIONS
+// ═══════════════════════════════════════════════
+
+export function formatAngka(n: number): string {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + " Jt";
+  if (n >= 1_000)     return (n / 1_000).toFixed(1) + " Rb";
+  return n.toString();
+}
+
+export function formatTanggal(date: Date | string): string {
+  return new Intl.DateTimeFormat("id-ID", {
+    dateStyle: "long",
+    timeStyle: "short",
+  }).format(new Date(date));
+}
+
+export function formatTanggalSingkat(date: Date | string): string {
+  return new Intl.DateTimeFormat("id-ID", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(date));
+}
+
+export function sisaWaktu(date: Date | string): string {
+  const diff  = new Date(date).getTime() - Date.now();
+  const jam   = Math.floor(diff / (1000 * 60 * 60));
+  const menit = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  if (diff <= 0) return "Sudah berakhir";
+  if (jam === 0) return `${menit} menit lagi`;
+  return `${jam} jam ${menit} menit lagi`;
+}
+
+export function nomorLaporan(id: number): string {
+  return "#" + String(id).padStart(5, "0");
+}
