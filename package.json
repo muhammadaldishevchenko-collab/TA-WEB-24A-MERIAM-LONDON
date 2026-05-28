@@ -1,29 +1,50 @@
 {
-  "name": "kebencanaan",
+  "name": "bencana-app",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev --name init",
+    "db:seed": "prisma db seed",
+    "db:studio": "prisma studio",
+    "db:generate": "prisma generate",
+    "db:reset": "prisma migrate reset --force"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@prisma/client": "^7.8.0",
     "lucide-react": "^1.16.0",
     "next": "16.2.5",
     "react": "19.2.4",
     "react-dom": "19.2.4"
+=======
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^16.0.0",
+    "lucide-react": "latest",
+    "next": "^15.5.18",
+    "pg": "^8.11.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+>>>>>>> eb1569040da65590f0fcb3690393dd8800a0929d
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.5",
-    "prisma": "^7.8.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.15",
+    "prisma": "^6.19.3",
+    "tailwindcss": "^3.4.19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
