@@ -9,36 +9,34 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-export const geistMono = Geist_Mono({
+const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "SIGAP - Sistem Informasi & Edukasi Kebencanaan",
-  description: "Platform informasi dan edukasi kebencanaan untuk masyarakat indonesia",
+  description:
+    "Platform informasi dan edukasi kebencanaan untuk masyarakat indonesia",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="id"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-     
-      <body className="min-h-full flex flex-col">
-        <Navbar/>
+      <body className="min-h-screen flex flex-col">
+        <Navbar />
 
-        <main className="flex-1">
-           {children}
-        </main>
-        <Footer/>
+        <main className="flex-1">{children}</main>
+
+        <Footer />
       </body>
-      
     </html>
   );
 }
