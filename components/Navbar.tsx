@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/mitigasi", label: "Panduan Mitigasi" },
   { href: "/darurat", label: "Info Darurat" },
   { href: "/berita", label: "Berita" },
+  { href: "/ai-assistant", label: "AI Assistant" },
 ];
 
 export default function Navbar() {
