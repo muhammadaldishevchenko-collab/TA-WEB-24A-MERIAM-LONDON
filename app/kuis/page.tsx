@@ -92,10 +92,10 @@ export default function KuisPage() {
           >
             <RotateCcw className="w-4 h-4" /> Ulangi Kuis
           </button>
-          
-            href="/edukasi"
-            className="flex items-center gap-2 bg-white border border-gray-200 text-gray-700 font-medium px-6 py-3 rounded-full hover:border-red-300 transition-colors"
-          >
+          <a
+          href="/edukasi"
+         className="flex items-center gap-2 bg-white border border-gray-200 text-gray-700 font-bold px-6 py-3 rounded-lg"
+         >
             Baca Materi
           </a>
         </div>
