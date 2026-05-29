@@ -167,3 +167,16 @@ export default function KuisPage() {
           <p>{q.penjelasan}</p>
         </div>
       )}
+
+      {/* Tombol Lanjut */}
+      {answered && (
+        <button
+          onClick={lanjut}
+          className="w-full bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-700 transition-colors"
+        >
+          {current + 1 >= total ? "Lihat Hasil →" : "Soal Berikutnya →"}
+        </button>
+      )}
+    </div>
+  );
+}
