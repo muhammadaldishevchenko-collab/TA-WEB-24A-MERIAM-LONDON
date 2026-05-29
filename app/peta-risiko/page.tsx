@@ -192,3 +192,29 @@ export default function PetaRisikoPage() {
           </div>
         </div>
       </div>
+        {/* Infografis bawah */}
+      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { label: "Wilayah Rawan", value: "34 Provinsi", icon: "🗺️", color: "bg-red-50 text-red-700" },
+          { label: "Jenis Bencana", value: "13 Jenis", icon: "⚠️", color: "bg-orange-50 text-orange-700" },
+          { label: "Zona Seismik", value: "500+ Sesar Aktif", icon: "🌍", color: "bg-yellow-50 text-yellow-700" },
+          { label: "Gunung Berapi", value: "127 Aktif", icon: "🌋", color: "bg-green-50 text-green-700" },
+        ].map((s) => (
+          <div key={s.label} className={`${s.color} rounded-xl p-5 text-center`}>
+            <div className="text-3xl mb-2">{s.icon}</div>
+            <div className="font-extrabold text-lg">{s.value}</div>
+            <div className="text-xs mt-1 opacity-75">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-6 bg-blue-50 border border-blue-100 rounded-xl p-4 flex items-start gap-3">
+        <AlertTriangle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+        <p className="text-sm text-blue-700">
+          Data ini bersifat edukatif berdasarkan informasi BNPB dan PVMBG. Untuk informasi real-time, kunjungi{" "}
+          <a href="https://bnpb.go.id" target="_blank" rel="noopener noreferrer" className="font-bold underline">bnpb.go.id</a>
+        </p>
+      </div>
+    </div>
+  );
+}
