@@ -72,3 +72,47 @@ export default function KuisPage() {
             ? "Cukup baik, tapi masih perlu belajar lebih lanjut."
             : "Perlu banyak belajar tentang kesiapsiagaan bencana."}
         </p>
+
+ {/* Riwayat per soal */}
+        <div className="flex justify-center gap-2 mb-8 flex-wrap">
+          {history.map((h, i) => (
+            <span
+              key={i}
+              className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold ${h ? "bg-green-500" : "bg-red-400"}`}
+            >
+              {i + 1}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex gap-3 justify-center">
+          <button
+            onClick={reset}
+            className="flex items-center gap-2 bg-red-600 text-white font-bold px-6 py-3 rounded-full hover:bg-red-700 transition-colors"
+          >
+            <RotateCcw className="w-4 h-4" /> Ulangi Kuis
+          </button>
+          
+            href="/edukasi"
+            className="flex items-center gap-2 bg-white border border-gray-200 text-gray-700 font-medium px-6 py-3 rounded-full hover:border-red-300 transition-colors"
+          >
+            Baca Materi
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-12">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-2xl font-bold text-gray-800">Kuis Kesiapsiagaan</h1>
+          <p className="text-gray-400 text-sm">Uji pengetahuanmu tentang bencana</p>
+        </div>
+        <div className="text-right">
+          <span className="text-sm font-bold text-red-600">{current + 1}</span>
+          <span className="text-sm text-gray-400"> / {total}</span>
+        </div>
+      </div>
