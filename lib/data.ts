@@ -123,192 +123,79 @@ export const mitigasiData = [
   },
 ];
 
-export const emergencyContacts = [
-  { id: 1, name: "BASARNAS", number: "115", desc: "Badan SAR Nasional", icon: "🚁" },
-  { id: 2, name: "BNPB", number: "117", desc: "Badan Nasional Penanggulangan Bencana", icon: "🏛️" },
-  { id: 3, name: "PMI", number: "021-7992325", desc: "Palang Merah Indonesia", icon: "🩺" },
-  { id: 4, name: "Polisi", number: "110", desc: "Kepolisian Republik Indonesia", icon: "👮" },
-  { id: 5, name: "Pemadam Kebakaran", number: "113", desc: "Dinas Pemadam Kebakaran", icon: "🚒" },
-  { id: 6, name: "Ambulans / Darurat", number: "118 / 119", desc: "Layanan Gawat Darurat Medis", icon: "🚑" },
-  { id: 7, name: "PLN (Gangguan Listrik)", number: "123", desc: "Perusahaan Listrik Negara", icon: "⚡" },
-  { id: 8, name: "BMKG", number: "196", desc: "Badan Meteorologi, Klimatologi & Geofisika", icon: "🌤️" },
-];
-
-export const beritaData = [
+export const quizData = [
   {
     id: 1,
-    judul: "BMKG Keluarkan Peringatan Dini Gempa di Wilayah Sulawesi",
-    tanggal: "7 Mei 2025",
-    kategori: "Gempa",
-    ringkasan: "BMKG mengeluarkan peringatan dini terkait potensi gempa berkekuatan 5,6 SR di wilayah Sulawesi Tengah. Masyarakat diminta tetap waspada dan memantau informasi resmi.",
-    penulis: "Tim Redaksi SIGAP",
-    image: "🌍",
+    pertanyaan: "Saat gempa terjadi, apa yang pertama kali harus dilakukan?",
+    pilihan: [
+      "Lari keluar gedung secepat mungkin",
+      "DROP, COVER, HOLD ON — merunduk, berlindung, pegang erat",
+      "Menelepon keluarga untuk memberi tahu",
+      "Matikan semua peralatan listrik",
+    ],
+    jawabanBenar: 1,
+    penjelasan: "DROP, COVER, HOLD ON adalah respons paling aman saat gempa. Berlari justru berbahaya karena bisa tertimpa benda jatuh.",
   },
   {
     id: 2,
-    judul: "Simulasi Evakuasi Tsunami di Pesisir Selatan Jawa Dilaksanakan",
-    tanggal: "5 Mei 2025",
-    kategori: "Tsunami",
-    ringkasan: "Ribuan warga pesisir selatan Jawa mengikuti simulasi evakuasi tsunami yang diselenggarakan oleh BNPB dan pemerintah daerah setempat.",
-    penulis: "Tim Redaksi SIGAP",
-    image: "🌀",
+    pertanyaan: "Tanda-tanda alam yang menunjukkan akan terjadi tsunami adalah...",
+    pilihan: [
+      "Langit menjadi sangat cerah dan berwarna merah",
+      "Angin kencang disertai hujan lebat",
+      "Air laut surut mendadak dan tidak wajar jauh ke laut",
+      "Suhu udara tiba-tiba sangat panas",
+    ],
+    jawabanBenar: 2,
+    penjelasan: "Air laut yang surut mendadak adalah salah satu tanda alam paling jelas akan datangnya tsunami. Segera lari ke dataran tinggi.",
   },
   {
     id: 3,
-    judul: "BNPB Distribusikan Logistik ke Korban Banjir Kalimantan",
-    tanggal: "3 Mei 2025",
-    kategori: "Banjir",
-    ringkasan: "BNPB bersama instansi terkait mendistribusikan ribuan paket logistik kepada korban banjir di Kalimantan Selatan yang terdampak sejak pekan lalu.",
-    penulis: "Tim Redaksi SIGAP",
-    image: "🌊",
+    pertanyaan: "Berapa minimal persediaan air minum yang harus ada dalam tas darurat untuk 1 orang?",
+    pilihan: [
+      "0,5 liter per hari",
+      "1 liter per hari",
+      "2 liter per hari (minimal 3 hari)",
+      "5 liter per hari",
+    ],
+    jawabanBenar: 2,
+    penjelasan: "Standar WHO adalah 2 liter air minum per orang per hari. Tas darurat idealnya cukup untuk 3 hari (6 liter).",
   },
   {
     id: 4,
-    judul: "Status Gunung Semeru Dinaikkan ke Level III (Siaga)",
-    tanggal: "1 Mei 2025",
-    kategori: "Erupsi",
-    ringkasan: "PVMBG menaikkan status Gunung Semeru ke Level III menyusul peningkatan aktivitas vulkanik yang signifikan dalam 48 jam terakhir.",
-    penulis: "Tim Redaksi SIGAP",
-    image: "🌋",
+    pertanyaan: "Nomor darurat BASARNAS (Badan SAR Nasional) adalah...",
+    pilihan: ["110", "112", "115", "117"],
+    jawabanBenar: 2,
+    penjelasan: "BASARNAS dapat dihubungi di nomor 115. Aktif 24 jam untuk penanganan kecelakaan dan pencarian korban bencana.",
   },
   {
     id: 5,
-    judul: "Pelatihan Pertolongan Pertama untuk 500 Relawan Kebencanaan",
-    tanggal: "28 April 2025",
-    kategori: "Edukasi",
-    ringkasan: "PMI menyelenggarakan pelatihan pertolongan pertama dan penanganan korban bencana yang diikuti oleh 500 relawan dari berbagai daerah.",
-    penulis: "Tim Redaksi SIGAP",
-    image: "🩺",
+    pertanyaan: "Saat banjir datang, tindakan PERTAMA yang harus dilakukan adalah...",
+    pilihan: [
+      "Menyelamatkan barang-barang berharga ke lantai atas",
+      "Matikan instalasi listrik di rumah lalu evakuasi ke tempat tinggi",
+      "Menunggu informasi resmi dari pemerintah",
+      "Berenang melintasi arus untuk mencari pertolongan",
+    ],
+    jawabanBenar: 1,
+    penjelasan: "Mematikan listrik mencegah korsleting yang bisa menyebabkan kebakaran atau sengatan listrik saat banjir.",
   },
   {
     id: 6,
-    judul: "Teknologi Early Warning System Dipasang di 50 Titik Rawan",
-    tanggal: "25 April 2025",
-    kategori: "Teknologi",
-    ringkasan: "Sistem peringatan dini berbasis sensor canggih kini dipasang di 50 titik rawan bencana sebagai bagian dari program mitigasi bencana nasional.",
-    penulis: "Tim Redaksi SIGAP",
-    image: "📡",
+    pertanyaan: "Status gunung berapi yang paling tinggi/berbahaya dalam sistem PVMBG adalah...",
+    pilihan: ["Level I (Normal)", "Level II (Waspada)", "Level III (Siaga)", "Level IV (Awas)"],
+    jawabanBenar: 3,
+    penjelasan: "Level IV (Awas) adalah status tertinggi yang berarti erupsi besar akan segera terjadi. Evakuasi wajib dilakukan.",
+  },
+  {
+    id: 7,
+    pertanyaan: "Dokumen penting apa yang WAJIB dibawa saat evakuasi bencana?",
+    pilihan: [
+      "Hanya uang tunai secukupnya",
+      "KTP, KK, akta kelahiran, dan dokumen penting lainnya",
+      "Laptop dan handphone saja",
+      "Pakaian sebanyak mungkin",
+    ],
+    jawabanBenar: 1,
+    penjelasan: "Dokumen identitas sangat penting untuk proses bantuan, klaim asuransi, dan pemulihan pasca bencana.",
   },
 ];
-
-// ═══════════════════════════════════════════════
-// BAGIAN 2 — TIPE TYPESCRIPT
-// ═══════════════════════════════════════════════
-
-export type StatistikItem = {
-  id: number; tahun: number; jenisBencana: string;
-  jumlahKejadian: number; jumlahKorban: number;
-  jumlahDampak: number; provinsi: string;
-};
-
-export type KomentarItem = {
-  id: number; topikId: string; topikJenis: string;
-  nama: string; email: string; isi: string;
-  disetujui: boolean; createdAt: Date;
-};
-
-export type PeringatanItem = {
-  id: number; provinsi: string; jenis: string;
-  level: string; pesan: string;
-  berlakuHingga: Date; aktif: boolean; createdAt: Date;
-};
-
-export type LaporanItem = {
-  id: number; namaPelapor: string; noTelepon: string;
-  jenisKelamin: string; provinsi: string; kabupaten: string;
-  kecamatan: string; alamatLengkap: string; jenisBencana: string;
-  tingkatDarurat: string; jumlahKorban: number; deskripsi: string;
-  status: string; createdAt: Date; updatedAt: Date;
-};
-
-// ═══════════════════════════════════════════════
-// BAGIAN 3 — KONSTANTA VISUAL
-// ═══════════════════════════════════════════════
-
-export const bencanaIcon: Record<string, string> = {
-  "Banjir": "🌊", "Gempa Bumi": "🌍", "Gempa": "🌍",
-  "Tanah Longsor": "⛰️", "Erupsi Gunung Berapi": "🌋",
-  "Erupsi": "🌋", "Tsunami": "🌀", "Kebakaran Hutan": "🔥",
-  "Angin Puting Beliung": "🌪️", "Kekeringan": "☀️",
-};
-
-export const bencanaWarna: Record<string, string> = {
-  "Banjir": "#3B82F6", "Gempa Bumi": "#EF4444",
-  "Tanah Longsor": "#F97316", "Erupsi Gunung Berapi": "#DC2626",
-  "Tsunami": "#6366F1", "Kebakaran Hutan": "#F59E0B",
-};
-
-export const levelColor: Record<string, string> = {
-  Waspada: "bg-yellow-100 text-yellow-800 border-yellow-300",
-  Siaga:   "bg-orange-100 text-orange-800 border-orange-300",
-  Bahaya:  "bg-red-100   text-red-800   border-red-300",
-};
-
-export const levelIcon: Record<string, string> = {
-  Waspada: "🟡", Siaga: "🟠", Bahaya: "🔴",
-};
-
-export const daruratColor: Record<string, string> = {
-  Rendah: "bg-green-100 text-green-700 border-green-200",
-  Sedang: "bg-yellow-100 text-yellow-700 border-yellow-200",
-  Tinggi: "bg-orange-100 text-orange-700 border-orange-200",
-  Kritis: "bg-red-100 text-red-700 border-red-200",
-};
-
-export const daruratIcon: Record<string, string> = {
-  Rendah: "🟢", Sedang: "🟡", Tinggi: "🟠", Kritis: "🔴",
-};
-
-export const statusConfig: Record<string, { label: string; color: string }> = {
-  Menunggu:  { label: "Menunggu",  color: "bg-gray-100 text-gray-700"   },
-  Diproses:  { label: "Diproses",  color: "bg-blue-100 text-blue-700"   },
-  Ditangani: { label: "Ditangani", color: "bg-green-100 text-green-700" },
-  Ditolak:   { label: "Ditolak",   color: "bg-red-100 text-red-700"     },
-};
-
-export const categoryColors: Record<string, string> = {
-  Gempa:     "bg-red-100 text-red-700",
-  Tsunami:   "bg-blue-100 text-blue-700",
-  Banjir:    "bg-sky-100 text-sky-700",
-  Erupsi:    "bg-orange-100 text-orange-700",
-  Edukasi:   "bg-green-100 text-green-700",
-  Teknologi: "bg-purple-100 text-purple-700",
-};
-
-// ═══════════════════════════════════════════════
-// BAGIAN 4 — HELPER FUNCTIONS
-// ═══════════════════════════════════════════════
-
-export function formatAngka(n: number): string {
-  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + " Jt";
-  if (n >= 1_000)     return (n / 1_000).toFixed(1) + " Rb";
-  return n.toString();
-}
-
-export function formatTanggal(date: Date | string): string {
-  return new Intl.DateTimeFormat("id-ID", {
-    dateStyle: "long",
-    timeStyle: "short",
-  }).format(new Date(date));
-}
-
-export function formatTanggalSingkat(date: Date | string): string {
-  return new Intl.DateTimeFormat("id-ID", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(new Date(date));
-}
-
-export function sisaWaktu(date: Date | string): string {
-  const diff  = new Date(date).getTime() - Date.now();
-  const jam   = Math.floor(diff / (1000 * 60 * 60));
-  const menit = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  if (diff <= 0) return "Sudah berakhir";
-  if (jam === 0) return `${menit} menit lagi`;
-  return `${jam} jam ${menit} menit lagi`;
-}
-
-export function nomorLaporan(id: number): string {
-  return "#" + String(id).padStart(5, "0");
-}
