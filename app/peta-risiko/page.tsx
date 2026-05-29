@@ -83,3 +83,20 @@ export default function PetaRisikoPage() {
       <p className="text-gray-500 mb-8">
         Sebaran wilayah rawan bencana di seluruh Indonesia berdasarkan data BNPB.
       </p>
+
+      {/* Filter */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        {["semua", "sangat-tinggi", "tinggi", "sedang"].map((lvl) => (
+          <button
+            key={lvl}
+            onClick={() => setFilterLevel(lvl)}
+            className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
+              filterLevel === lvl
+                ? "bg-red-600 text-white border-red-600"
+                : "bg-white text-gray-600 border-gray-200 hover:border-red-300"
+            }`}
+          >
+            {lvl === "semua" ? "Semua Wilayah" : lvl === "sangat-tinggi" ? "🔴 Sangat Tinggi" : lvl === "tinggi" ? "🟠 Tinggi" : "🟡 Sedang"}
+          </button>
+        ))}
+      </div>
