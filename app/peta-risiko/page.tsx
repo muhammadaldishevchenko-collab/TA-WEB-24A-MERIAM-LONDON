@@ -53,3 +53,14 @@ const wilayahData = [
     koordinat: { x: 58, y: 60 },
   },
 ];
+
+const levelConfig = {
+  "sangat-tinggi": { label: "Sangat Tinggi", color: "bg-red-100 text-red-800 border-red-300", dot: "bg-red-500", badge: "bg-red-500" },
+  "tinggi": { label: "Tinggi", color: "bg-orange-100 text-orange-800 border-orange-300", dot: "bg-orange-400", badge: "bg-orange-400" },
+  "sedang": { label: "Sedang", color: "bg-yellow-100 text-yellow-800 border-yellow-300", dot: "bg-yellow-400", badge: "bg-yellow-400" },
+};
+
+const bencanaEmoji: Record<string, string> = {
+  Gempa: "🌍", Tsunami: "🌊", Longsor: "⛰️", Banjir: "💧",
+  Erupsi: "🌋", "Kebakaran Hutan": "🔥", Likuifaksi: "🏚️",
+};
