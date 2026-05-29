@@ -66,7 +66,7 @@ const bencanaEmoji: Record<string, string> = {
 };
 
 export default function PetaRisikoPage() {
-  const [selected, setSelected] = useState<typeof wilayahData[0] | null>(null);
+  const [selectedWilayah, setSelectedWilayah] = useState<typeof wilayahData[0] | null>(null);
   const [filterLevel, setFilterLevel] = useState<string>("semua");
 
   const filtered = filterLevel === "semua"
@@ -115,11 +115,11 @@ export default function PetaRisikoPage() {
             <div className="relative w-full" style={{ height: "340px" }}>
               {filtered.map((w) => {
                 const cfg = levelConfig[w.level as keyof typeof levelConfig];
-                const isSelected = selected?.id === w.id;
+                const isSelected = selectedWilayah?.id === w.id;
                 return (
                   <button
                     key={w.id}
-                    onClick={() => setSelected(w)}
+                    onClick={() => setSelectedWilayah(w)}
                     style={{ left: `${w.koordinat.x}%`, top: `${w.koordinat.y}%` }}
                     className={`absolute transform -translate-x-1/2 -translate-y-1/2 group transition-transform hover:scale-125 ${isSelected ? "scale-125 z-10" : ""}`}
                     title={w.nama}
@@ -146,19 +146,19 @@ export default function PetaRisikoPage() {
         </div>
         {/* Detail Panel */}
         <div className="flex flex-col gap-4">
-          {selected ? (
+          {selectedWilayah ? (
             <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 flex-1">
               <div className="flex items-start justify-between mb-3">
-                <h2 className="text-lg font-bold text-gray-800">{selected.nama}</h2>
-                <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${levelConfig[selected.level as keyof typeof levelConfig].color}`}>
-                  {levelConfig[selected.level as keyof typeof levelConfig].label}
+                <h2 className="text-lg font-bold text-gray-800">{selectedWilayah.nama}</h2>
+                <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${levelConfig[selectedWilayah.level as keyof typeof levelConfig].color}`}>
+                  {levelConfig[selectedWilayah.level as keyof typeof levelConfig].label}
                 </span>
               </div>
-              <p className="text-gray-500 text-sm mb-4 leading-relaxed">{selected.detail}</p>
+              <p className="text-gray-500 text-sm mb-4 leading-relaxed">{selectedWilayah.detail}</p>
               <div>
                 <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Jenis Bencana</p>
                 <div className="flex flex-wrap gap-2">
-                  {selected.risiko.map((r) => (
+                  {selectedWilayah.risiko.map((r) => (
                     <span key={r} className="flex items-center gap-1 bg-red-50 text-red-700 text-xs font-medium px-2.5 py-1 rounded-full">
                       {bencanaEmoji[r]} {r}
                     </span>
@@ -180,8 +180,8 @@ export default function PetaRisikoPage() {
               return (
                 <button
                   key={w.id}
-                  onClick={() => setSelected(w)}
-                  className={`text-left bg-white border rounded-xl px-4 py-3 hover:border-red-300 transition-colors flex items-center gap-3 ${selected?.id === w.id ? "border-red-400 bg-red-50" : "border-gray-100"}`}
+                  onClick={() => setSelectedWilayah(w)}
+                  className={`text-left bg-white border rounded-xl px-4 py-3 hover:border-red-300 transition-colors flex items-center gap-3 ${selectedWilayah?.id === w.id ? "border-red-400 bg-red-50" : "border-gray-100"}`}
                 >
                   <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${cfg.dot}`} />
                   <span className="text-sm font-medium text-gray-700">{w.nama}</span>
