@@ -181,7 +181,7 @@ export default function PetaRisikoPage() {
                 <button
                   key={w.id}
                   onClick={() => setSelectedWilayah(w)}
-                  className={`text-left bg-white border rounded-xl px-4 py-3 hover:border-red-300 transition-colors flex items-center gap-3 ${selectedWilayah?.id === w.id ? "border-red-400 bg-red-50" : "border-gray-100"}`}
+                  className={`text-left bg-white border rounded-xl px-4 py-3 flex items-center gap-3 transition-all duration-200 hover:border-red-300 hover:bg-red-50 hover:shadow-sm ${selectedWilayah?.id === w.id ? "border-red-400 bg-red-50 shadow-sm" : "border-gray-100"}`}
                 >
                   <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${cfg.dot}`} />
                   <span className="text-sm font-medium text-gray-700">{w.nama}</span>
