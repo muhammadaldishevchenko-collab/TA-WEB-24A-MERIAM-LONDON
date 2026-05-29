@@ -14,3 +14,33 @@ export default function KuisPage() {
 
   const q = quizData[current];
   const total = quizData.length;
+
+  function pilih(idx: number) {
+    if (answered) return;
+    setSelected(idx);
+    setAnswered(true);
+    const benar = idx === q.jawabanBenar;
+    if (benar) setScore((s) => s + 1);
+    setHistory((h) => [...h, benar]);
+  }
+
+  function lanjut() {
+    if (current + 1 >= total) {
+      setDone(true);
+    } else {
+      setCurrent((c) => c + 1);
+      setSelected(null);
+      setAnswered(false);
+    }
+  }
+
+  function reset() {
+    setCurrent(0);
+    setSelected(null);
+    setAnswered(false);
+    setScore(0);
+    setDone(false);
+    setHistory([]);
+  }
+
+  const nilaiPersen = Math.round((score / total) * 100);
