@@ -116,3 +116,54 @@ export default function KuisPage() {
           <span className="text-sm text-gray-400"> / {total}</span>
         </div>
       </div>
+
+ {/* Progress Bar */}
+      <div className="bg-gray-100 rounded-full h-2 mb-8 overflow-hidden">
+        <div
+          className="bg-red-500 h-2 rounded-full transition-all duration-500"
+          style={{ width: `${((current) / total) * 100}%` }}
+        />
+      </div>
+
+      {/* Kartu Pertanyaan */}
+      <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-6 mb-6">
+        <span className="text-xs font-bold text-red-500 uppercase tracking-wider mb-4 block">
+          Soal {current + 1}
+        </span>
+        <h2 className="text-lg font-bold text-gray-800 leading-relaxed">{q.pertanyaan}</h2>
+      </div>
+
+      {/* Pilihan Jawaban */}
+      <div className="flex flex-col gap-3 mb-6">
+        {q.pilihan.map((p, idx) => {
+          let style = "bg-white border-gray-200 text-gray-700 hover:border-red-300";
+          if (answered) {
+            if (idx === q.jawabanBenar) style = "bg-green-50 border-green-400 text-green-800";
+            else if (idx === selected && idx !== q.jawabanBenar) style = "bg-red-50 border-red-400 text-red-800";
+            else style = "bg-gray-50 border-gray-100 text-gray-400";
+          }
+          return (
+            <button
+              key={idx}
+              onClick={() => pilih(idx)}
+              disabled={answered}
+              className={`flex items-start gap-3 w-full text-left border rounded-xl px-4 py-3 transition-colors text-sm font-medium ${style}`}
+            >
+              <span className="flex-shrink-0 w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-xs font-bold mt-0.5">
+                {String.fromCharCode(65 + idx)}
+              </span>
+              <span className="pt-0.5">{p}</span>
+              {answered && idx === q.jawabanBenar && <CheckCircle className="w-5 h-5 ml-auto flex-shrink-0 text-green-500 mt-0.5" />}
+              {answered && idx === selected && idx !== q.jawabanBenar && <XCircle className="w-5 h-5 ml-auto flex-shrink-0 text-red-400 mt-0.5" />}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Penjelasan */}
+      {answered && (
+        <div className={`rounded-xl p-4 mb-6 text-sm leading-relaxed ${selected === q.jawabanBenar ? "bg-green-50 text-green-800 border border-green-200" : "bg-red-50 text-red-800 border border-red-200"}`}>
+          <p className="font-bold mb-1">{selected === q.jawabanBenar ? "✅ Benar!" : "❌ Kurang tepat."}</p>
+          <p>{q.penjelasan}</p>
+        </div>
+      )}
