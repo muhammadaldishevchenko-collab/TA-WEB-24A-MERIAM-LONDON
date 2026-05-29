@@ -64,3 +64,22 @@ const bencanaEmoji: Record<string, string> = {
   Gempa: "🌍", Tsunami: "🌊", Longsor: "⛰️", Banjir: "💧",
   Erupsi: "🌋", "Kebakaran Hutan": "🔥", Likuifaksi: "🏚️",
 };
+
+export default function PetaRisikoPage() {
+  const [selected, setSelected] = useState<typeof wilayahData[0] | null>(null);
+  const [filterLevel, setFilterLevel] = useState<string>("semua");
+
+  const filtered = filterLevel === "semua"
+    ? wilayahData
+    : wilayahData.filter((w) => w.level === filterLevel);
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      {/* Header */}
+      <div className="flex items-center gap-3 mb-2">
+        <MapPin className="w-8 h-8 text-red-600" />
+        <h1 className="text-3xl font-bold text-gray-800">Peta Risiko Bencana Indonesia</h1>
+      </div>
+      <p className="text-gray-500 mb-8">
+        Sebaran wilayah rawan bencana di seluruh Indonesia berdasarkan data BNPB.
+      </p>
