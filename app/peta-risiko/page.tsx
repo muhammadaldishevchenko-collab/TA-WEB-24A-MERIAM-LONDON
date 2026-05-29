@@ -144,3 +144,51 @@ export default function PetaRisikoPage() {
             </div>
           </div>
         </div>
+        {/* Detail Panel */}
+        <div className="flex flex-col gap-4">
+          {selected ? (
+            <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 flex-1">
+              <div className="flex items-start justify-between mb-3">
+                <h2 className="text-lg font-bold text-gray-800">{selected.nama}</h2>
+                <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${levelConfig[selected.level as keyof typeof levelConfig].color}`}>
+                  {levelConfig[selected.level as keyof typeof levelConfig].label}
+                </span>
+              </div>
+              <p className="text-gray-500 text-sm mb-4 leading-relaxed">{selected.detail}</p>
+              <div>
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Jenis Bencana</p>
+                <div className="flex flex-wrap gap-2">
+                  {selected.risiko.map((r) => (
+                    <span key={r} className="flex items-center gap-1 bg-red-50 text-red-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                      {bencanaEmoji[r]} {r}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="bg-gray-50 border border-dashed border-gray-200 rounded-2xl p-6 flex-1 flex flex-col items-center justify-center text-center gap-3">
+              <Info className="w-8 h-8 text-gray-300" />
+              <p className="text-gray-400 text-sm">Klik salah satu titik di peta untuk melihat detail risiko bencana wilayah tersebut.</p>
+            </div>
+          )}
+
+          {/* Semua kartu kecil */}
+          <div className="overflow-y-auto max-h-48 flex flex-col gap-2">
+            {filtered.map((w) => {
+              const cfg = levelConfig[w.level as keyof typeof levelConfig];
+              return (
+                <button
+                  key={w.id}
+                  onClick={() => setSelected(w)}
+                  className={`text-left bg-white border rounded-xl px-4 py-3 hover:border-red-300 transition-colors flex items-center gap-3 ${selected?.id === w.id ? "border-red-400 bg-red-50" : "border-gray-100"}`}
+                >
+                  <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${cfg.dot}`} />
+                  <span className="text-sm font-medium text-gray-700">{w.nama}</span>
+                  <span className="ml-auto text-xs text-gray-400">{w.risiko.length} risiko</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
