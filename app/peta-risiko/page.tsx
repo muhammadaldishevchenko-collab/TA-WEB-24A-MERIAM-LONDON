@@ -100,3 +100,47 @@ export default function PetaRisikoPage() {
           </button>
         ))}
       </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Peta Visual (Simplified Indonesia Map) */}
+        <div className="lg:col-span-2 bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2 relative" style={{ minHeight: "380px" }}>
+            {/* Background Indonesia outline */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-10">
+              <span className="text-9xl">🗺️</span>
+            </div>
+            <p className="text-xs text-blue-400 font-medium mb-2 px-2">
+              Indonesia — Klik titik untuk detail wilayah
+            </p>
+            {/* Plot wilayah sebagai titik interaktif */}
+            <div className="relative w-full" style={{ height: "340px" }}>
+              {filtered.map((w) => {
+                const cfg = levelConfig[w.level as keyof typeof levelConfig];
+                const isSelected = selected?.id === w.id;
+                return (
+                  <button
+                    key={w.id}
+                    onClick={() => setSelected(w)}
+                    style={{ left: `${w.koordinat.x}%`, top: `${w.koordinat.y}%` }}
+                    className={`absolute transform -translate-x-1/2 -translate-y-1/2 group transition-transform hover:scale-125 ${isSelected ? "scale-125 z-10" : ""}`}
+                    title={w.nama}
+                  >
+                    <div className={`w-4 h-4 rounded-full border-2 border-white shadow-md ${cfg.badge} ${isSelected ? "ring-2 ring-gray-800 ring-offset-1" : ""}`} />
+                    <span className={`absolute -bottom-5 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-gray-900 text-white px-1.5 py-0.5 rounded`}>
+                      {w.nama}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Legend */}
+            <div className="absolute bottom-3 right-3 bg-white/90 rounded-xl p-3 text-xs flex flex-col gap-1.5">
+              {Object.entries(levelConfig).map(([k, v]) => (
+                <div key={k} className="flex items-center gap-2">
+                  <span className={`w-3 h-3 rounded-full ${v.dot}`} />
+                  <span className="text-gray-600">{v.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
