@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/berita", label: "Berita" },
   { href: "/kuis", label: "Quiz" },
   { href: "/ai-assistant", label: "AI Assistant" },
+  { href: "/tas-darurat", label: "Tas darurat" },
 ];
 
 export default function Navbar() {
