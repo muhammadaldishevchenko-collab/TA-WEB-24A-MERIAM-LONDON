@@ -9,6 +9,8 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: process.env["DATABASE_URL"],
+    // prisma config expects string; provide safe fallback for build-time validation
+    url: process.env["DATABASE_URL"] ?? "",
   },
+
 });
