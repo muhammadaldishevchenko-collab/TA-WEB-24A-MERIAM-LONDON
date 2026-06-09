@@ -1,4 +1,4 @@
-import { emergencyContacts } from "@/lib/data";
+import { emergencyContacts } from "@/lib/data-combat";
 import { AlertTriangle, Phone } from "lucide-react";
 
 export const metadata = { title: "Info Darurat | SIGAP" };
