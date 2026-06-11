@@ -136,3 +136,13 @@ export default function TentangPage() {
                       {i + 1}
                     </span>
                     <div>
+                        <h3 className="font-semibold text-white mb-1">{item.judul}</h3>
+                      <p className="text-slate-400 text-sm leading-relaxed">
+                        {item.deskripsi}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
