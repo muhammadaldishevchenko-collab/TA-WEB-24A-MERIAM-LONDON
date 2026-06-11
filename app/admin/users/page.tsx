@@ -8,22 +8,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { db } from "../../../lib/db";
 
-// Used only for typing the table rows when Prisma types are not yet available.
-// After updating schema + running prisma generate, these casts can be removed.
-
-
-type UserRow = {
-  id: string;
-  name: string;
-  email: string;
-  role: string;
-  isActive: boolean;
-  createdAt: Date;
-};
+import { db } from "@/lib/db";
 
 function formatDate(date: Date) {
+
 
   return new Intl.DateTimeFormat("id-ID", {
     year: "numeric",
@@ -103,7 +92,7 @@ async function UsersTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-{(users as unknown as UserRow[]).map((user) => (
+{users.map((user) => (
             <TableRow key={user.id} className="hover:bg-gray-50/70">
 
               <TableCell className="font-medium text-gray-900">{user.name}</TableCell>

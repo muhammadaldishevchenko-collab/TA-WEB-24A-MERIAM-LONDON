@@ -6,9 +6,11 @@ generator client {
 
 datasource db {
   provider = "postgresql" // Menggunakan postgresql, bukan mysql
-  
- 
+  url      = env("DATABASE_URL")
 }
+
+
+
 
 model LaporanBencana {
   id             Int      @id @default(autoincrement())
