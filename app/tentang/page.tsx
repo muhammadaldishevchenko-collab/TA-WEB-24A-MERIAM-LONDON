@@ -68,4 +68,10 @@ export default function TentangPage() {
               Sistem Informasi &amp;{" "}
               <span style={{ color: "#4ade80" }}>Edukasi Kebencanaan</span>
             </h1>
-
+<p className="text-slate-300 text-lg leading-relaxed">
+              SIGAP hadir sebagai platform digital terpadu untuk membantu masyarakat
+              Indonesia memahami, mempersiapkan diri, dan merespons bencana alam
+              dengan lebih cepat dan tepat.
+            </p>
+          </div>
+        </section>
