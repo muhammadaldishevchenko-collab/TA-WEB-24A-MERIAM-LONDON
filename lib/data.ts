@@ -199,3 +199,61 @@ export const quizData = [
     penjelasan: "Dokumen identitas sangat penting untuk proses bantuan, klaim asuransi, dan pemulihan pasca bencana.",
   },
 ];
+
+// ---- DATA TAS DARURAT ----
+export const tasItems = [
+  {
+    kategori: "Air & Makanan",
+    emoji: "💧",
+    items: [
+      { id: "air", nama: "Air minum 6 liter (3 hari)", penting: true },
+      { id: "makanan", nama: "Makanan kaleng / siap saji 3 hari", penting: true },
+      { id: "pembuka", nama: "Pembuka kaleng & sendok", penting: false },
+    ],
+  },
+  {
+    kategori: "Pertolongan Pertama",
+    emoji: "🩺",
+    items: [
+      { id: "obat", nama: "Obat-obatan rutin & P3K", penting: true },
+      { id: "perban", nama: "Perban, plester, kasa steril", penting: true },
+      { id: "antiseptik", nama: "Antiseptik (betadine/alkohol)", penting: false },
+    ],
+  },
+  {
+    kategori: "Dokumen Penting",
+    emoji: "📄",
+    items: [
+      { id: "ktp", nama: "KTP & KK (fotokopi)", penting: true },
+      { id: "akta", nama: "Akta kelahiran & ijazah", penting: true },
+      { id: "asuransi", nama: "Polis asuransi & buku tabungan", penting: false },
+    ],
+  },
+  {
+    kategori: "Komunikasi & Cahaya",
+    emoji: "🔦",
+    items: [
+      { id: "senter", nama: "Senter + baterai cadangan", penting: true },
+      { id: "hp", nama: "Powerbank & charger HP", penting: true },
+      { id: "radio", nama: "Radio portabel", penting: false },
+    ],
+  },
+  {
+    kategori: "Pakaian & Perlindungan",
+    emoji: "👕",
+    items: [
+      { id: "baju", nama: "Pakaian ganti 3 hari", penting: true },
+      { id: "masker", nama: "Masker N95 (5 buah)", penting: true },
+      { id: "jas", nama: "Jas hujan / ponco", penting: false },
+    ],
+  },
+  {
+    kategori: "Uang & Alat Bantu",
+    emoji: "💰",
+    items: [
+      { id: "uang", nama: "Uang tunai secukupnya", penting: true },
+      { id: "peluit", nama: "Peluit darurat", penting: true },
+      { id: "peta", nama: "Peta wilayah lokal", penting: false },
+    ],
+  },
+];

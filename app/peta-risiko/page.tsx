@@ -1,4 +1,8 @@
+"use client";
+
 import { useState } from "react";
+
+
 import { MapPin, AlertTriangle, Info } from "lucide-react";
 
 const wilayahData = [

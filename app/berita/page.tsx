@@ -1,5 +1,5 @@
 import React from 'react'
-import { beritaData } from "@/lib/data";
+import { beritaData } from "@/lib/data-combat";
 import { Newspaper } from "lucide-react";
 
 export const metadata = { title: "Berita | SIGAP" };
