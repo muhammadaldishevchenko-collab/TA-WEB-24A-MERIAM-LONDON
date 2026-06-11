@@ -18,5 +18,7 @@ const teknologi = [
 const tujuan = [
   {
     judul: "Edukasi Kebencanaan",
-    
+    deskripsi:
+      "Memberikan informasi dan edukasi bencana alam kepada masyarakat Indonesia secara mudah dan terpercaya.",
+  },
   
