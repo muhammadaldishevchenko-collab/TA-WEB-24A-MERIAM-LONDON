@@ -170,3 +170,7 @@ export default function TentangPage() {
             </div>
           </section>
                         
+          {/* Tim */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-8">
+              Tim <span style={{ color: "#4ade80"               
