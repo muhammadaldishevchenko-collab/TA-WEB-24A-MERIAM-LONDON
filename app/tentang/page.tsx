@@ -163,5 +163,10 @@ export default function TentangPage() {
                   <div>
                     <p className="font-semibold text-white text-sm">{tech.nama}</p>
                     <p className="text-xs text-slate-500">
+                        {tech.kategori}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
                         
-
