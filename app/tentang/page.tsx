@@ -161,3 +161,7 @@ export default function TentangPage() {
                 >
                   <span className="text-2xl">{tech.icon}</span>
                   <div>
+                    <p className="font-semibold text-white text-sm">{tech.nama}</p>
+                    <p className="text-xs text-slate-500">
+                        
+
