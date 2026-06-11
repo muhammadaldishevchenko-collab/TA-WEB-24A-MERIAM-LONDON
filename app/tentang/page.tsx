@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const teamMembers = [
   { nama: "Muhammad Aldi Sheva", peran: "Project Lead & Frontend Developer", inisial: "MA" },
@@ -43,8 +42,8 @@ export default function TentangPage() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0f172a" }}>
       <Navbar />
 
-      <main className="flex-1"></main>
-      {/* Hero */}
+      <main className="flex-1">
+        {/* Hero */}
         <section
           className="relative py-20 px-6 text-center overflow-hidden"
           style={{ backgroundColor: "#1e293b" }}
@@ -74,4 +73,14 @@ export default function TentangPage() {
               dengan lebih cepat dan tepat.
             </p>
           </div>
-        </section>
+          </section>
+
+        <div className="max-w-5xl mx-auto px-6 py-14 space-y-16">
+
+          {/* Deskripsi */}
+          <section className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Apa itu <span style={{ color: "#4ade80" }}>SIGAP?</span>
+              </h2>
+        
