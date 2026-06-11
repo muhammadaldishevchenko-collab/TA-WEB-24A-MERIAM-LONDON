@@ -28,3 +28,6 @@ const tujuan = [
   },
   {
     judul: "Respons Cepat",
+    deskripsi:
+      "Membantu masyarakat mengakses informasi darurat dan kontak bantuan dengan cepat di saat kritis.",
+  },
