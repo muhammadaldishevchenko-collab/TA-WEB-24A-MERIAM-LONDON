@@ -83,4 +83,13 @@ export default function TentangPage() {
               <h2 className="text-2xl font-bold text-white mb-4">
                 Apa itu <span style={{ color: "#4ade80" }}>SIGAP?</span>
               </h2>
-        
+        </section>
+
+        <div className="max-w-5xl mx-auto px-6 py-14 space-y-16">
+
+          {/* Deskripsi */}
+          <section className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Apa itu <span style={{ color: "#4ade80" }}>SIGAP?</span>
+              </h2>
