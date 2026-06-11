@@ -152,4 +152,12 @@ export default function TentangPage() {
             <h2 className="text-2xl font-bold text-white mb-8">
               Teknologi yang <span style={{ color: "#4ade80" }}>Digunakan</span>
             </h2>
-            
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {teknologi.map((tech) => (
+                <div
+                  key={tech.nama}
+                  className="rounded-xl p-4 flex items-center gap-3"
+                  style={{ backgroundColor: "#1e293b", border: "1px solid #334155" }}
+                >
+                  <span className="text-2xl">{tech.icon}</span>
+                  <div>
