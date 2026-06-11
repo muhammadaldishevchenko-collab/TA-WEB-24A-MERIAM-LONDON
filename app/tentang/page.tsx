@@ -93,3 +93,25 @@ export default function TentangPage() {
               <h2 className="text-2xl font-bold text-white mb-4">
                 Apa itu <span style={{ color: "#4ade80" }}>SIGAP?</span>
               </h2>
+              <div
+              className="rounded-2xl p-6 space-y-2"
+              style={{ backgroundColor: "#1e293b", border: "1px solid #334155" }}
+            >
+              {[
+                { label: "Kategori Bencana", value: "12+" },
+                { label: "Panduan Mitigasi", value: "30+" },
+                { label: "Kontak Darurat", value: "5 Lembaga" },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex items-center justify-between py-3"
+                  style={{ borderBottom: "1px solid #334155" }}
+                >
+                  <span className="text-slate-400 text-sm">{stat.label}</span>
+                  <span className="font-bold text-lg" style={{ color: "#4ade80" }}>
+                    {stat.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
