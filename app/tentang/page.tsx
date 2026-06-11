@@ -146,3 +146,10 @@ export default function TentangPage() {
               ))}
             </div>
           </section>
+
+          {/* Teknologi */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-8">
+              Teknologi yang <span style={{ color: "#4ade80" }}>Digunakan</span>
+            </h2>
+            
