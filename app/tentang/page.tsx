@@ -191,3 +191,5 @@ export default function TentangPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-white">
+                        {member.nama}</p>
+                    <p className="text-sm text-slate-500"></p>
