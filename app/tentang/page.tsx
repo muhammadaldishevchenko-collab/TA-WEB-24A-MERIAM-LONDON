@@ -15,3 +15,8 @@ const teknologi = [
   { nama: "Prisma ORM", kategori: "ORM", icon: "🔗" },
   { nama: "Vercel", kategori: "Deployment", icon: "🚀" },
 ];
+const tujuan = [
+  {
+    judul: "Edukasi Kebencanaan",
+    
+  
