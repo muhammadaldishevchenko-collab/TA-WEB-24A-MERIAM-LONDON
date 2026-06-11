@@ -3,18 +3,18 @@ import Footer from "@/components/Footer";
 
 const teamMembers = [
   {
-    nama: "Muhammad Aldi Sheva",
-    peran: "Project Lead & Frontend Developer",
+    nama: "Muhammad Aldi Shevchenko",
+    Mahasiswa: "Universitas Teknokrat Indonesia",
     inisial: "MA",
   },
   {
     nama: "Fikri Muarif",
-    peran: "Backend Developer",
+    Mahasiswa: "Universitas Teknokrat Indonesia",
     inisial: "FM",
   },
   {
     nama: "Gilang Amangga",
-    peran: "UI/UX Designer",
+    Mahasiswa: "Universitas Teknokrat Indonesia",
     inisial: "GA",
   },
 ];
@@ -249,7 +249,7 @@ export default function TentangPage() {
                     </p>
 
                     <p className="text-sm text-slate-500">
-                      {member.peran}
+                      {member.Mahasiswa}
                     </p>
                   </div>
                 </div>
