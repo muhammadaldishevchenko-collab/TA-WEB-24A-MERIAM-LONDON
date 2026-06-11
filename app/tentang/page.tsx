@@ -7,3 +7,11 @@ const teamMembers = [
   { nama: "Gilang Amangga", peran: "UI/UX Designer", inisial: "GA" },
 ];
 
+const teknologi = [
+  { nama: "Next.js 14", kategori: "Framework", icon: "⚡" },
+  { nama: "TypeScript", kategori: "Bahasa", icon: "🔷" },
+  { nama: "Tailwind CSS", kategori: "Styling", icon: "🎨" },
+  { nama: "PostgreSQL", kategori: "Database", icon: "🗄️" },
+  { nama: "Prisma ORM", kategori: "ORM", icon: "🔗" },
+  { nama: "Vercel", kategori: "Deployment", icon: "🚀" },
+];
