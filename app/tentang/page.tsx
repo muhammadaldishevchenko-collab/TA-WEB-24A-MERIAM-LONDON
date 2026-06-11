@@ -31,3 +31,5 @@ const tujuan = [
     deskripsi:
       "Membantu masyarakat mengakses informasi darurat dan kontak bantuan dengan cepat di saat kritis.",
   },
+  {
+    judul: "Peta Risiko",
