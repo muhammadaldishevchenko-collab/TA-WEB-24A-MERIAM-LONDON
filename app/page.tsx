@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Shield, MapPin, Phone, Newspaper, GraduationCap, AlertCircle, Image as ImageIcon } from "lucide-react";
+import { Shield, MapPin, Phone, Newspaper, GraduationCap, AlertCircle, Image as ImageIcon, BookAIcon } from "lucide-react";
 
 const features = [
   {
@@ -148,6 +148,11 @@ export default function HomePage() {
                     desc: "Panduan 3 fase mitigasi.",
                     href: "/mitigasi",
                     icon: GraduationCap,
+                  }, {
+                    label: "Tentang Kami",
+                    desc: "Informasi Tentang Pembuatan Web",
+                    href: "/tentang",
+                    icon: BookAIcon,
                   }].map((card) => {
                     const Icon = card.icon;
                     return (
