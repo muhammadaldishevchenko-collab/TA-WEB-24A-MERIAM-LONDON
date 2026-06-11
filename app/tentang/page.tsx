@@ -175,4 +175,16 @@ export default function TentangPage() {
             <h2 className="text-2xl font-bold text-white mb-8">
               Tim <span style={{ color: "#4ade80"    
               }}>Pengembang</span>
-            </h2>           
+            </h2>      
+            <div className="grid sm:grid-cols-2 gap-4">
+              {teamMembers.map((member, i) => (
+                <div
+                  key={i}
+                  className="rounded-xl p-5 flex items-center gap-4"
+                  style={{ backgroundColor: "#1e293b", border: "1px solid #334155" }}
+                >
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0"
+                    style={{ backgroundColor: "#166534", color: "#4ade80" }}
+                  >  
+                     
