@@ -37,3 +37,10 @@ const tujuan = [
       "Menyajikan peta risiko bencana berbasis wilayah agar masyarakat waspada terhadap potensi ancaman.",
   },
 ];
+
+export default function TentangPage() {
+  return (
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0f172a" }}>
+      <Navbar />
+
+      <main className="flex-1"></main>
