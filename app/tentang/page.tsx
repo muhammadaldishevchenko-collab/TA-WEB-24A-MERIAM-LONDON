@@ -63,4 +63,7 @@ export default function TentangPage() {
               style={{ backgroundColor: "#166534", color: "#4ade80" }}
 
             ></div>
+            entang SIGAP
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-5"></h1>
             
