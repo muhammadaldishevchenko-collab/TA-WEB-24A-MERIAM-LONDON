@@ -187,4 +187,7 @@ export default function TentangPage() {
                     className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0"
                     style={{ backgroundColor: "#166534", color: "#4ade80" }}
                   >  
-                     
+                     {member.inisial}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">
