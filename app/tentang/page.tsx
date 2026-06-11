@@ -33,3 +33,7 @@ const tujuan = [
   },
   {
     judul: "Peta Risiko",
+    deskripsi:
+      "Menyajikan peta risiko bencana berbasis wilayah agar masyarakat waspada terhadap potensi ancaman.",
+  },
+];
