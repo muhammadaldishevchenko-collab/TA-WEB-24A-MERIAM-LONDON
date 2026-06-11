@@ -57,13 +57,15 @@ export default function TentangPage() {
             className="absolute -bottom-20 -right-10 w-80 h-80 rounded-full opacity-5"
             style={{ backgroundColor: "#4ade80" }}
           />
-          <div className="relative max-w-3xl mx-auto">
+         <div className="relative max-w-3xl mx-auto">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4"
               style={{ backgroundColor: "#166534", color: "#4ade80" }}
-
-            ></div>
-            entang SIGAP
+            >
+            Tentang SIGAP
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-5"></h1>
-            
+              Sistem Informasi &amp;{" "}
+              <span style={{ color: "#4ade80" }}>Edukasi Kebencanaan</span>
+            </h1>
+
