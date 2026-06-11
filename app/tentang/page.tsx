@@ -121,3 +121,18 @@ export default function TentangPage() {
             <h2 className="text-2xl font-bold text-white mb-8">
               Tujuan <span style={{ color: "#4ade80" }}>SIGAP</span>
             </h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {tujuan.map((item, i) => (
+                <div
+                  key={i}
+                  className="rounded-xl p-5"
+                  style={{ backgroundColor: "#1e293b", border: "1px solid #334155" }}
+                >
+                  <div className="flex items-start gap-4">
+                    <span
+                      className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold"
+                      style={{ backgroundColor: "#166534", color: "#4ade80" }}
+                    >
+                      {i + 1}
+                    </span>
+                    <div>
