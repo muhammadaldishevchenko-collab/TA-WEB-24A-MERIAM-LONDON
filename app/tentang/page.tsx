@@ -115,3 +115,9 @@ export default function TentangPage() {
               ))}
             </div>
           </section>
+
+{/* Tujuan */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-8">
+              Tujuan <span style={{ color: "#4ade80" }}>SIGAP</span>
+            </h2>
