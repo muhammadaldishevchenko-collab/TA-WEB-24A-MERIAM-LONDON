@@ -21,4 +21,6 @@ const tujuan = [
     deskripsi:
       "Memberikan informasi dan edukasi bencana alam kepada masyarakat Indonesia secara mudah dan terpercaya.",
   },
+  {
+    judul: "Panduan Mitigasi",
   
