@@ -44,3 +44,23 @@ export default function TentangPage() {
       <Navbar />
 
       <main className="flex-1"></main>
+      {/* Hero */}
+        <section
+          className="relative py-20 px-6 text-center overflow-hidden"
+          style={{ backgroundColor: "#1e293b" }}
+        >
+          <div
+            className="absolute -top-16 -left-16 w-64 h-64 rounded-full opacity-10"
+            style={{ backgroundColor: "#4ade80" }}
+          />
+          <div
+            className="absolute -bottom-20 -right-10 w-80 h-80 rounded-full opacity-5"
+            style={{ backgroundColor: "#4ade80" }}
+          />
+          <div className="relative max-w-3xl mx-auto">
+            <span
+              className="inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4"
+              style={{ backgroundColor: "#166534", color: "#4ade80" }}
+
+            ></div>
+            
