@@ -23,4 +23,6 @@ const tujuan = [
   },
   {
     judul: "Panduan Mitigasi",
-  
+  dskripsi:
+      "Meenyediakan panduan langkah-langkah mitigasi sebelum, saat, dan sesudah bencana terjadi.",
+  },
