@@ -17,7 +17,7 @@ const wilayahData = [
     koordinat: { x: 12, y: 38 },
   },
   {
-    id: 3, nama: "Jakarta & Jawa Barat", risiko: ["Banjir", "Gempa"], level: "tinggi",
+    id: 3, nama: "Jakarta Jawa Barat,Lampung", risiko: ["Banjir", "Gempa"], level: "tinggi",
     detail: "Banjir tahunan akibat urbanisasi masif dan pendangkalan sungai.",
     koordinat: { x: 32, y: 55 },
   },

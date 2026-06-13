@@ -81,7 +81,7 @@ export default function TasDaruratPage() {
           {checked.size === allIds.length ? "Hapus Semua" : "Centang Semua"}
         </button>
         <span className="flex items-center gap-1.5 text-xs text-gray-400 px-3 py-2 bg-red-50 rounded-full">
-          <span className="w-2 h-2 bg-red-500 rounded-full" /> = Wajib ada
+          <span className="text-xs text-red-500 font-bold flex-shrink-0" /> = Wajib ada
         </span>
         <span className="flex items-center gap-1.5 text-xs text-gray-400 px-3 py-2 bg-gray-50 rounded-full">
           <span className="w-2 h-2 bg-gray-300 rounded-full" /> = Opsional
