@@ -80,27 +80,3 @@ export default function DaruratPage() {
   );
 }
 
-{/* Kontak Admin SIGAP */}
-<div className="mt-10 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-2xl p-8">
-  <h2 className="text-2xl font-bold mb-4 text-center">
-    📞 Hubungi Admin SIGAP
-  </h2>
-
-  <div className="grid md:grid-cols-2 gap-4">
-    {/* WhatsApp */}
-    <a
-      href="https://wa.me/6281234567890"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-white/10 hover:bg-white/20 transition rounded-xl p-5 flex items-center gap-4"
-    >
-      <span className="text-4xl">💬</span>
-      <div>
-        <h3 className="font-bold text-lg">WhatsApp</h3>
-        <p className="text-sm text-blue-100">
-          +62 812-3456-7890
-        </p>
-      </div>
-    </a>
-
-    
